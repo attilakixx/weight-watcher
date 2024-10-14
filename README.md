@@ -47,6 +47,9 @@ Now you can use the alias `ww` to run the `weight-watcher` tool.
 
 ## Usage
 
+**Set your height in the weight-watcher.sh file (HEIGHT)**
+**Create a weight_log.csv file in your system, and edit the path to the file in the weight-watcher.sh file (LOG_FILE)**
+
 ### Add weight for today:
 
     #(in bash)
