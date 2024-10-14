@@ -66,5 +66,5 @@ Now you can use the alias `ww` to run the `weight-watcher` tool.
 
 ## Screenshot
 
-    ![App Screenshot](https://github.com/attilakixx/weight-watcher/blob/main/Screenshot.png?raw=true)
+    ![App Screenshot](https://github.com/attilakixx/weight-watcher/blob/main/Screenshot.png)
 
