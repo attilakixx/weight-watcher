@@ -94,11 +94,31 @@ ww_list() {
 	# Print the list of weight entries sorted by date
 	echo "Date       | Weight | BMI  | Category"
 	echo "--------------------------------------"
+	
+	# Read all records into an array
+	ENTRIES=($(sort $LOG_FILE | cut -d',' -f2))
+
+	# Extract the first and last weights from the sorted list
+	FIRST_WEIGHT=$(echo "${ENTRIES[0]}" | cut -d',' -f1)
+	LAST_WEIGHT=$(echo "${ENTRIES[-1]}" | cut -d',' -f1)
+
+	# Calculate the weight difference
+	WEIGHT_DIFF=$(echo "scale=2; $LAST_WEIGHT - $FIRST_WEIGHT" | bc)
+
+	# Output the list of weight entries
 	sort $LOG_FILE | while IFS=',' read -r DATE WEIGHT BMI; do
 		CATEGORY=$(categorize_bmi $BMI)
 		echo "$DATE | ${WEIGHT} kg | BMI: $BMI | $CATEGORY"
 	done
+
+	echo ""
+	if (( $(echo "$WEIGHT_DIFF > 0" | bc -l) )); then
+		echo "Weight gain: ${WEIGHT_DIFF} kg"
+	else
+		echo "Weight loss: ${WEIGHT_DIFF#-} kg"
+	fi
 }
+
 
 # Parse the command and arguments
 case "$1" in
