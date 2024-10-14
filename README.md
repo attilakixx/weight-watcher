@@ -52,11 +52,13 @@ ww add 66.6
 	# Will log 66.6 kg for todays date
 
 ### Add weight for a specific date:
+
 ```bash
 ww add 66.6 2024-10-06
 	# will log 66.6 kg for the date: 2024-10-06
 
 ### List all records
+
 ```bash
 ww list
 
