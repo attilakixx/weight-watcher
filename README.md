@@ -63,3 +63,6 @@ Now you can use the alias `ww` to run the `weight-watcher` tool.
 
     #(in bash)
     ww list
+
+    ![image](https://github.com/user-attachments/assets/38e78256-3c9b-44a4-979c-618e1184be27)
+
