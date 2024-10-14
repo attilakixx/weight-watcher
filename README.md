@@ -1,3 +1,4 @@
+
 # weight-watcher
 
 A simple CLI tool to log your weight, calculate your BMI, and display your ideal weight. This tool helps you keep track of your weight records over time and analyze your progress.
@@ -47,18 +48,18 @@ Now you can use the alias `ww` to run the `weight-watcher` tool.
 ## Usage
 
 ### Add weight for today:
-```bash
-ww add 66.6
-	# Will log 66.6 kg for todays date
 
-### Add weight for a specific date:
+    #(in bash)
+    ww add 66.6
+    # Will log 66.6 kg for todays date
 
-```bash
-ww add 66.6 2024-10-06
-	# will log 66.6 kg for the date: 2024-10-06
+### Add weight for specific date
+
+    #(in bash)
+    ww add 66.6 2024-10-06
+    # Will log 66.6 kg for the date: 2024-10-06
 
 ### List all records
 
-```bash
-ww list
-
+    #(in bash)
+    ww list
