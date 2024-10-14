@@ -66,5 +66,5 @@ Now you can use the alias `ww` to run the `weight-watcher` tool.
 
 ## Screenshot
 
-    ![screenshot](Screenshot.png)
+    ![screenshot](screenshot.png)
 
